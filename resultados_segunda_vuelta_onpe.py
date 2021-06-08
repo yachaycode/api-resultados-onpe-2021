@@ -35,24 +35,30 @@ if __name__ == "__main__":
 	print ('RESULTADOS DE FORMA AUTOMÁTICA ELECCIONES PRESIDENCIALES, SEGUNDA VUELTA - AMBITO TODO, PERU 2021')
 	print ('Fuente:https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T')
 	while True:
-		data = get_data_api_onpe()
-		name_peru_libre = data.get('results')[0]
-		name_fuerza_popular = data.get('results')[1]
-		# print ('fuerza_popular:',name_fuerza_popular)
-		# print ('peru_libre:',name_peru_libre)
-		pause = randint(15*60, 25*60) 
-		dif_votos = (int(name_peru_libre.get('TOTAL_VOTOS').replace(',','')) - int(name_fuerza_popular.get('TOTAL_VOTOS').replace(',', '')))
-		print ('\n')
-		print (name_peru_libre.get('AGRUPACION') , '  ',          name_fuerza_popular.get('AGRUPACION'))
-		print ('-------------------------------------  ---------------------------\n')
-		print ('TOTAL_VOTOS:', name_peru_libre.get('TOTAL_VOTOS') , '               TOTAL_VOTOS:', name_fuerza_popular.get('TOTAL_VOTOS'))
-		print ('votos emitidos: {}{}:'.format(name_peru_libre.get('POR_EMITIDOS'), '%'), '             votos emitidos: {}{}'.format(name_fuerza_popular.get('POR_EMITIDOS'),'%'))
-		print ('VOTOS VALIDOS: {}{}'.format(name_peru_libre.get('POR_VALIDOS'),'%' ) , '               VOTOS VALIDOS: {}{}'.format(name_fuerza_popular.get('POR_VALIDOS'),'%'))
-		print ('DIFERENCIA DE VOTOS PERU LIBRE FRENTE A FUERZA POPULAR:{} VOTOS'.format(dif_votos))
-		print ("FECHA DE ACTUALIZACION:{}{}".format(data.get('generals').get('actData').get('FECHA'), ' a las'), data.get('generals').get('actData').get('HORA'))
-		print ('AVANCE CONTEO:{}%'.format(data.get('generals').get('actData').get('POR_AVANCE')))
-		print('Esperando {}min para la próxima consulta automática..'.format(int(pause/60)))
-		time.sleep(pause)
+		try:
+			data = get_data_api_onpe()
+			name_peru_libre = data.get('results')[0]
+			name_fuerza_popular = data.get('results')[1]
+			# print ('fuerza_popular:',name_fuerza_popular)
+			# print ('peru_libre:',name_peru_libre)
+			pause = randint(5, 10) 
+			dif_votos = (int(name_peru_libre.get('TOTAL_VOTOS').replace(',','')) - int(name_fuerza_popular.get('TOTAL_VOTOS').replace(',', '')))
+			print ('\n')
+			print (name_peru_libre.get('AGRUPACION') , '  ',          name_fuerza_popular.get('AGRUPACION'))
+			print ('-------------------------------------  ---------------------------\n')
+			print ('TOTAL_VOTOS:', name_peru_libre.get('TOTAL_VOTOS') , '               TOTAL_VOTOS:', name_fuerza_popular.get('TOTAL_VOTOS'))
+			print ('votos emitidos: {}{}:'.format(name_peru_libre.get('POR_EMITIDOS'), '%'), '             votos emitidos: {}{}'.format(name_fuerza_popular.get('POR_EMITIDOS'),'%'))
+			print ('VOTOS VALIDOS: {}{}'.format(name_peru_libre.get('POR_VALIDOS'),'%' ) , '               VOTOS VALIDOS: {}{}'.format(name_fuerza_popular.get('POR_VALIDOS'),'%'))
+			print ('DIFERENCIA DE VOTOS PERU LIBRE FRENTE A FUERZA POPULAR:{} VOTOS'.format(dif_votos))
+			print ('AVANCE CONTEO GENERAL:{}%'.format(data.get('generals').get('actData').get('POR_AVANCE')))
+			print ('ACTAS_PROCESADAS:{}%'.format(data.get('generals').get('generalData').get('POR_ACTAS_PROCESADAS')))
+			print ('ACTAS_CONTABILIZADAS:{}%'.format(data.get('generals').get('generalData').get('POR_ACTAS_CONTABILIZADAS')))
+			print ("FECHA DE ACTUALIZACION:{}{}".format(data.get('generals').get('actData').get('FECHA'), ' a las'), data.get('generals').get('actData').get('HORA'))
+			print('Esperando {}min para la próxima consulta automática..'.format(int(pause/60)))
+			time.sleep(pause)
+		except Exception as e:
+			print ("General api error", e)
+		
 
 
 		
