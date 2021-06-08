@@ -49,4 +49,4 @@ python resultados_segunda_vuelta_onpe.py
 [https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)
 
 ### Contactos
-Si tienes alguna dura me puedes escribir a wsp [+51983679449](https://wa.me/51983679449).
+Si tienes alguna duda me puedes escribir a wsp [+51983679449](https://wa.me/51983679449).
