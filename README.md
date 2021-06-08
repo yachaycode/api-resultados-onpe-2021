@@ -45,7 +45,7 @@ ejecutar el script
 python resultados_segunda_vuelta_onpe.py
 ```
 
-### Referencias:
+### Fuente:
 [https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)
 
 ### Contactos
