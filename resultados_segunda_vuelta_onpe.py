@@ -51,7 +51,7 @@ if __name__ == "__main__":
 		print ('DIFERENCIA DE VOTOS PERU LIBRE FRENTE A FUERZA POPULAR:{} VOTOS'.format(dif_votos))
 		print ("FECHA DE ACTUALIZACION:{}{}".format(data.get('generals').get('actData').get('FECHA'), ' a las'), data.get('generals').get('actData').get('HORA'))
 		print ('AVANCE CONTEO:{}%'.format(data.get('generals').get('actData').get('POR_AVANCE')))
-		print('Esperando {}min para la proxima consulta automática..'.format(int(pause/60)))
+		print('Esperando {}min para la próxima consulta automática..'.format(int(pause/60)))
 		time.sleep(pause)
 
 

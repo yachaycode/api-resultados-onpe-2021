@@ -1,6 +1,6 @@
 PRESENTACIÓN EN CONSOLA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
 
-Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances cada 15min aprox.
+Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances de forma automática cada 15min aprox.
 ![ONPE RESULTADOS](resultados-onpe.png)
 
 ### Requisitos:
