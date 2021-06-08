@@ -17,9 +17,8 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 En windows ejecutar el archivo :
 abrir el ejecutable `resultados_segunda_vuelta_onpe.exe`
 
-En linux y mac ejecutar el archivo:
-abrir el archivo ejecutable  `resultados_segunda_vuelta_onpe`
-
+En linux y mac ejecutar el archivo en terminal:
+ejecutar el archivo  `./resultados_segunda_vuelta_onpe`
 
 ![Datos que muestra el servicio](resultado-onpe-prueba.png)
 
@@ -46,3 +45,6 @@ python resultados_segunda_vuelta_onpe.py
 
 ### Referencias:
 [https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)
+
+##Contactos
+Si tienes alguna dura me puedes escribir a wsp [+51983679449](https://wa.me/51983679449).
