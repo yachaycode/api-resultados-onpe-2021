@@ -1,4 +1,4 @@
-PRESENTACIÓN EN CONSOLA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
+# PRESENTACIÓN AUTOMÁTICA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
 
 Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances de forma automática cada 15min aprox.
 ![ONPE RESULTADOS](resultados-onpe.png)
@@ -48,5 +48,5 @@ python resultados_segunda_vuelta_onpe.py
 ### Referencias:
 [https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)
 
-## Contactos
+### Contactos
 Si tienes alguna dura me puedes escribir a wsp [+51983679449](https://wa.me/51983679449).
