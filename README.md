@@ -1,5 +1,6 @@
-VISUALIZACION DE RESULTADOS EN TIEMP REAL, ELECCIONES PRESIDENCIALES SEGUNDA VUELTA - AMBITO TODO, PERU 2021
+PRESENTACIÓN EN CONSOLA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
 
+Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances cada 15min aprox.
 ![ONPE RESULTADOS](resultados-onpe.png)
 
 ### Requisitos:
@@ -7,7 +8,7 @@ VISUALIZACION DE RESULTADOS EN TIEMP REAL, ELECCIONES PRESIDENCIALES SEGUNDA VUE
 - pip3 
 - virtualenv 
 - python3.6.x 
-- requiests
+- requests
 
 ### Requisitos S.O:
 - Windows, linux o mac.
@@ -17,7 +18,11 @@ En windows ejecutar el archivo :
 abrir el ejecutable `resultados_segunda_vuelta_onpe.exe`
 
 En linux y mac ejecutar el archivo:
->>  abrir el archivo ejecutable  `resultados_segunda_vuelta_onpe`
+abrir el archivo ejecutable  `resultados_segunda_vuelta_onpe`
+
+
+![Datos que muestra el servicio](resultado-onpe-prueba.png)
+
 
 ### Ejecución en modo desarrollador:
 
@@ -39,3 +44,5 @@ ejecutar el script
 python resultados_segunda_vuelta_onpe.py
 ```
 
+### Referencias:
+[https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)

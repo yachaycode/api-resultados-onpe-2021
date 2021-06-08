@@ -32,7 +32,7 @@ def get_data_api_onpe():
 
 if __name__ == "__main__":
 	print (' ')
-	print ('RESULTADO EN TIEMP REAL, ELECCIONES PRESIDENCIALES, SEGUNDA VUELTA - AMBITO TODO, PERU 2021')
+	print ('RESULTADOS DE FORMA AUTOMÁTICA ELECCIONES PRESIDENCIALES, SEGUNDA VUELTA - AMBITO TODO, PERU 2021')
 	print ('Fuente:https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T')
 	while True:
 		data = get_data_api_onpe()
