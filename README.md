@@ -13,7 +13,7 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 ### Requisitos S.O:
 - Windows, linux o mac.
 
-### Ejecucion en modo usuario
+### Ejecución en modo usuario
 En windows ejecutar el archivo :
 
 abrir el ejecutable `resultados_segunda_vuelta_onpe.exe`
