@@ -15,9 +15,11 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 
 ### Ejecucion en modo usuario
 En windows ejecutar el archivo :
+
 abrir el ejecutable `resultados_segunda_vuelta_onpe.exe`
 
 En linux y mac ejecutar el archivo en terminal:
+
 ejecutar el archivo  `./resultados_segunda_vuelta_onpe`
 
 ![Datos que muestra el servicio](resultado-onpe-prueba.png)
