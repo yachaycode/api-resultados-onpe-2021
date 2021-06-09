@@ -5,7 +5,7 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 #### Nota:Te pido encarecidamente que no abuses las políticas de solicitudes de ONPE, aumentado la frecuencia de tiempo de espera establecido por defecto y no me responsabilizo de posibles bloqueos o uso indebido.
 
 - Por restricciones de Onpe, ahora solo fuciona con un navegador en primer plano, es decir, solicitudes sin cabeza están bloqueados..
-- El archivo ejecutable para windows está desactualizado.
+- El archivo ejecutable para windows ya está actualizado, cuando ejecutan va abrir automáticamente el nevegador chrome, no cerrar.
 
 ![ONPE RESULTADOS](resultados-onpe.png)
 
