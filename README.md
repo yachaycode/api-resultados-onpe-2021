@@ -1,6 +1,12 @@
 # PRESENTACIÓN AUTOMÁTICA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
 
 Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances de forma automática cada 15min aprox.
+
+#### NOta:Te pido encarecidamente que no abuses las políticas de solicitudes de ONPE, aumentado la frecuencia de tiempo de espera establecido por defecto y no me responsabilizo de posibles bloqueos o uso indebido.
+
+- Por restricciones de Onpe, ahora solo fuciona con un navegador en primer plano, es decir, solicitudes sin cabeza están bloqueados..
+- El archivo ejecutable para windows está desactualizado.
+
 ![ONPE RESULTADOS](resultados-onpe.png)
 
 ### Requisitos:
@@ -9,6 +15,7 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 - virtualenv 
 - python3.6.x 
 - requests
+- selenium
 
 ### Requisitos S.O:
 - Windows, linux o mac.
