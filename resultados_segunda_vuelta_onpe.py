@@ -36,18 +36,21 @@ class ApiOnpe(DriverChrome):
 			raise e
 		return data_json
 
+	def get_data_info_general_onpe():
+		"""Genral data info onpe"""
+		pass
 api_onpe = ApiOnpe()
 utils = Utils()
 # count = 1
-base_count = 3001
+base_count_ubigeo = 3001
 while True:
-	id_ibigeo = '00'+str(base_count)
+	id_ibigeo = '00'+str(base_count_ubigeo)
 	url_base_api_apurimac = "https://api.resultadossep.eleccionesgenerales2021.pe/mesas/detalle/{}?name=param".format(id_ibigeo)
 	print ("URL API", url_base_api_apurimac)
 	id_mongo = utils.get_id_table(id_ibigeo)
-	base_count +=1
+	base_count_ubigeo +=1
 	api_onpe.get_data_onpe(url_base_api_apurimac)
 	date_complete_api = api_onpe.curation_data()
 	if date_complete_api:
 		utils.save_data_mongo_table(date_complete_api, id_mongo)
-	print ("Giuardando ubigeo:", base_count)
+	print ("Giuardando ubigeo:", base_count_ubigeo)

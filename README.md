@@ -46,6 +46,11 @@ Instalación de dependencias
 ```
 pip install -r install requeriments.txt
 ```
+crear el archivo de configuracion y agregar sus credenciales de DB mongodb
+```
+cp example_config.json config.json
+```
+
 ejecutar el script
 
 ```
