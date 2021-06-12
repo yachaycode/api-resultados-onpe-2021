@@ -51,10 +51,16 @@ crear el archivo de configuracion y agregar sus credenciales de DB mongodb
 cp example_config.json config.json
 ```
 
-ejecutar el script
+ejecutar el script, visualización de resumen resultados
 
 ```
 python resultados_segunda_vuelta_onpe.py
+```
+
+ejecutar el script, extracción actas de cada mesa de votación
+
+```
+python extraccion_actas_mesas_onpe.py
 ```
 
 ### Fuente:
