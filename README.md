@@ -1,9 +1,15 @@
-# PRESENTACIÓN AUTOMÁTICA DE RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL, AMBITO TODO - PERU 2021
+# PRESENTACIÓN DATOS ABIERTOS DE ONPE, RESULTADOS SEGUNDA ELECCIÓN PRESIDENCIAL- PERU 2021
 
-Con este script ya no tendrá que estar visitando a la página de onpe cada 30min xD. simplemente déjelo ejecutando una sola vez y el servicio le mostrará los avances de forma automática cada 15min aprox.
+Este proyecto trata de proveer recursos, herramientas y técnicas para poder tener toda la información organizado y estructurado para su posterior análisis y presentación a la ciudadanía en general, del proceso de elecciones presidenciales segunda vuelta 2021. Un especie de datos abiertos para científicos de datos, analistas de datos, colectivos sociales, periodistas, investigadores, políticos, etc.
+ 
 
-#### Nota:Te pido encarecidamente que no abuses las políticas de solicitudes de ONPE, aumentado la frecuencia de tiempo de espera establecido por defecto y no me responsabilizo de posibles bloqueos o uso indebido.
+## COMPONENTES DEL PROYECTO:
+- Prensentación autómatica de datos generales avance de conteo de votos a nivel nacional.
 
+- Recolección y almacenado de información en base de datos orientado a documentos, de todas las actas por ubigeo hasta 11 de junio del 2021.
+
+
+#### Nota:
 - Por restricciones de Onpe, ahora solo fuciona con un navegador en primer plano, es decir, solicitudes sin cabeza están bloqueados..
 - El archivo ejecutable para windows ya está actualizado, cuando ejecutan va abrir automáticamente el nevegador chrome, no cerrar.
 
@@ -16,11 +22,12 @@ Con este script ya no tendrá que estar visitando a la página de onpe cada 30mi
 - python3.6.x 
 - requests
 - selenium
+- Mongodb 4.4
 
 ### Requisitos S.O:
 - Windows, linux o mac.
 
-### Ejecución en modo usuario
+### Ejecución en modo usuario, visualización automática de resumen de resultados
 En windows ejecutar el archivo :
 
 abrir el ejecutable `resultados_segunda_vuelta_onpe.exe`
@@ -30,9 +37,10 @@ En linux y mac ejecutar el archivo en terminal:
 ejecutar el archivo  `./resultados_segunda_vuelta_onpe`
 
 ![Datos que muestra el servicio](resultado-onpe-prueba.png)
+![Información de actas a nivel nacinal en mongodb](actas-onpe-mongodb.png)
 
 
-### Ejecución en modo desarrollador:
+### Ejecución en modo desarrollador del proyecto en general:
 
 Crear un entorno virtual(opcional)
 ```
@@ -63,8 +71,40 @@ ejecutar el script, extracción actas de cada mesa de votación
 python extraccion_actas_mesas_onpe.py
 ```
 
+## Cargar datos en mongodb
+- Debes tener instalado mongo y configurado, más información de [instalación de MongoDB](https://docs.mongodb.com/manual/installation/) .
+
+Puede restaurar datos a mongo, pasos:
+
+1: Create una base de datos llamado  `db_onpe_presidenciales`
+
+2: Descomprime el archivo `db_onpe_presidenciales.zip`  
+
+3: Ejecutar este comando para restaurar la DB, debes sustituir el parámetros `userxxxx` y `passwordxxxx` por tu configuración de mongo.
+
+```
+mongodump --host 127.0.0.1 --port 27017 --username userxxxx --password passwordxxxx --authenticationDatabase admin --db db_onpe_presidenciales
+
+```
+
+
 ### Fuente:
 [https://www.onpe.gob.pe/](https://www.resultadossep.eleccionesgenerales2021.pe/SEP2021/EleccionesPresidenciales/RePres/T)
+
+
+Referencias:
+
+[Ubigeos Perú](https://account.geodir.co/recursos/ubigeo-reniec-peru.html)
+
+[RoTorresT extracción de actas en .json, se encuentra en el directorio: data-acts](https://github.com/RoTorresT/segunda_vuelta_peru_2021)
+
+
+## Colaboradores
+
+[Datascience Perú](https://www.datascience.pe/)
+
+[Hackactivistas](https://hackactivistas.org/)
+
 
 ### Contactos
 Si tienes alguna duda me puedes escribir a wsp [+51983679449](https://wa.me/51983679449).

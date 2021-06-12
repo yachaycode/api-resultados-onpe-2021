@@ -36,21 +36,29 @@ class ApiOnpe(DriverChrome):
 			raise e
 		return data_json
 
-	def get_data_info_general_onpe():
-		"""Genral data info onpe"""
-		pass
+
 api_onpe = ApiOnpe()
 utils = Utils()
-# count = 1
-base_count_ubigeo = 3001
+count =1 # Reintents
+sleep_gets = 0
+base_count_act = 1 # Nuber acts
 while True:
-	id_ibigeo = '00'+str(base_count_ubigeo)
-	url_base_api_apurimac = "https://api.resultadossep.eleccionesgenerales2021.pe/mesas/detalle/{}?name=param".format(id_ibigeo)
-	print ("URL API", url_base_api_apurimac)
-	id_mongo = utils.get_id_table(id_ibigeo)
-	base_count_ubigeo +=1
-	api_onpe.get_data_onpe(url_base_api_apurimac)
+	id_act = str(base_count_act).zfill(6) # 000001, 000002...etc
+	url_base_api_act = "https://api.resultadossep.eleccionesgenerales2021.pe/mesas/detalle/{}?name=param".format(id_act)
+	base_count_act +=1
+	sleep_gets +=1 
+	id_mongo = utils.get_id_table(id_act)
+	api_onpe.get_data_onpe(url_base_api_act)
 	date_complete_api = api_onpe.curation_data()
 	if date_complete_api:
-		utils.save_data_mongo_table(date_complete_api, id_mongo)
-	print ("Giuardando ubigeo:", base_count_ubigeo)
+		utils.save_data_mongo_table(date_complete_api, id_mongo, id_act)
+	else:
+		print('Posiblimente no existe acta  ...', count)
+		count +=1
+	if count>=10:
+		print("Posiblimente  exedio número de reintentos....")
+		exit()
+	if sleep_gets>=500:
+		time.sleep(randint(30, 60)) # sleep every  500 requests..
+		sleep_gets = 0
+	print ("Insertando acta..:", id_act)
