@@ -96,7 +96,7 @@ Referencias:
 
 [Ubigeos Perú](https://account.geodir.co/recursos/ubigeo-reniec-peru.html)
 
-[RoTorresT extracción de actas en .json, se encuentra en el directorio: data-acts](https://github.com/RoTorresT/segunda_vuelta_peru_2021)
+[RoTorresT extracción de actas en .json, se encuentra en el archivo: data-acts.zip](https://github.com/RoTorresT/segunda_vuelta_peru_2021)
 
 
 ## Colaboradores
