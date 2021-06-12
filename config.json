@@ -1,0 +1,10 @@
+{
+"mongo-connection": {
+        "database" : "db_onpe_presidenciales",
+        "host": "localhost", 
+        "port": 27017,
+        "db_auth": "admin",
+        "user": "umongo",
+        "password": "Whatssapo123"
+}
+}
